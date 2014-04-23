@@ -1,0 +1,861 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html>
+<head>
+<title>学生课表</title>
+<Meta http-equiv="Content-Type" Content="text/html; Charset=gbk">
+<Meta http-equiv="Content-Language" Content="zh-CN">
+<Meta http-equiv="MSThemeCompatible" Content="No">
+<Meta name="Author" Content="Educational Technology Institute, Tsinghua University">
+<Meta name="Copyright" Content="Copyright(c)2005 Educational Technology Institute, Tsinghua University">
+<link href="/academic/styles/css/view.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="/academic/styles/js/common.js" ></script>
+<script language="javascript" src="/academic/styles/js/general.js" ></script>
+<script type="text/javascript" src="/academic/styles/js/jquery.js" ></script>
+<style type="text/css">
+    table.infolist_hr{margin:0 auto;}
+    #noArrangement td{height:auto; word-wrap:break-word;white-space: -moz-pre-wrap;}/*IE auto wrap*/
+    #title{margin:0 auto;margin-bottom:10px;}
+    #title table{margin:0 auto;text-align:center;}
+    #subTitle{margin:20px 0;width:100%;text-align:center;color:#CC0000;font-size:15px;font-weight:bold;letter-spacing:2px;}
+</style>
+
+
+</head>
+
+<body>
+<center>
+<table cellpadding="0" cellspacing="0" class="logo_tab">
+    <tr>
+        <td class="logo"></td>
+    </tr>
+</table>
+<table cellpadding="0" cellspacing="0" class="content_tab">
+    <tr>
+        <td class="content">
+        <div id="title">
+            <table cellpadding="0" cellspacing="0">
+                <tr>
+                    <td nowrap="nowrap"><div>
+                    2014
+                    春
+                        <!--显示第几周课表 2011-9-28 唐贺明增加-->
+                       
+                        学生课表: 201140705003
+                        (<a class="infolist" href="?id=410343&yearid=34&termid=1&timetableType=STUDENT&sectionType=BASE">小节课表</a>)</div></td>
+                </tr>
+            </table>
+        </div>
+
+            
+                <table width="92%" border="0" cellspacing="0" cellpadding="0" >
+                    <tr>
+                        <td align="right"> 班级：11软件(外包)03</td>
+                    </tr>
+                </table>
+            
+
+
+        <table id="timetable" cellspacing="0" cellpadding="0" class="infolist_hr"><tr><th  >&nbsp;</th><th nowrap>周一</th><th nowrap>周二</th><th nowrap>周三</th><th nowrap>周四</th><th nowrap>周五</th><th nowrap>周六</th><th nowrap>周日</th></tr>
+<tr class="infolist_hr_common" onMouseOver="javascript:this.className='infolist_hr_current'" onMouseOut="javascript:this.className='infolist_hr_common'"><th nowrap >1、2<br>08:00<br>┆<br>09:50</th><td id="1-3969" class="center">&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼301<br>李琳<br>1-15<br>讲课学时</td><td id="2-3969" class="center">&lt;&lt;JSP开发技术&gt;&gt;;1<br>博知楼305<br>冯娟娟<br>1-8<br>1-4<br>讲课学时</td><td id="3-3969" class="center">&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼301<br>李琳<br>1-15<br>讲课学时</td><td id="4-3969" class="center">&lt;&lt;高级日语1&gt;&gt;;1<br>博知楼107<br>刘会斌<br>1-16<br>讲课学时</td><td id="5-3969" class="center">&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼301<br>李琳<br>单周1-13<br>讲课学时</td><td id="6-3969" class="center">&nbsp;</td><td id="7-3969" class="center">&nbsp;</td></tr>
+<tr class="infolist_hr_common" onMouseOver="javascript:this.className='infolist_hr_current'" onMouseOut="javascript:this.className='infolist_hr_common'"><th nowrap >3、4<br>10:10<br>┆<br>12:00</th><td id="1-3970" class="center">&lt;&lt;高级日语1&gt;&gt;;1<br>博知楼107<br>刘会斌<br>1-16<br>讲课学时<br>&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时</td><td id="2-3970" class="center">&lt;&lt;JSP开发技术&gt;&gt;;1<br>博知楼305<br>冯娟娟<br>1-8<br>1-4<br>讲课学时</td><td id="3-3970" class="center">&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时</td><td id="4-3970" class="center">&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>10<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>11<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>12<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>13<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>14<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>15<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>7<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼506-专业实验中心<br>李琳<br>7-15<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>8<br>实验学时<br>&lt;&lt;计算机网络原理&gt;&gt;;2<br>博知楼517-专业实验中心<br>李琳<br>9<br>实验学时</td><td id="5-3970" class="center">&nbsp;</td><td id="6-3970" class="center">&nbsp;</td><td id="7-3970" class="center">&nbsp;</td></tr>
+<tr class="infolist_hr_common" onMouseOver="javascript:this.className='infolist_hr_current'" onMouseOut="javascript:this.className='infolist_hr_common'"><th nowrap >5、6<br>13:30<br>┆<br>15:20</th><td id="1-3971" class="center">&lt;&lt;STRUTS开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>讲课学时<br>&lt;&lt;Oracle数据库编程&gt;&gt;;1<br>博知楼306<br>徐美娇<br>1-8<br>5-8<br>讲课学时<br>&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时</td><td id="2-3971" class="center">&lt;&lt;Hibernate开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>名称</td><td id="3-3971" class="center">&lt;&lt;STRUTS开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>讲课学时<br>&lt;&lt;Oracle数据库编程&gt;&gt;;1<br>博知楼306<br>徐美娇<br>1-8<br>5-8<br>讲课学时<br>&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时</td><td id="4-3971" class="center">&lt;&lt;JSP开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>1-8<br>5-8<br>讲课学时<br>&lt;&lt;Hibernate开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>名称</td><td id="5-3971" class="center">&nbsp;</td><td id="6-3971" class="center">&nbsp;</td><td id="7-3971" class="center">&nbsp;</td></tr>
+<tr class="infolist_hr_common" onMouseOver="javascript:this.className='infolist_hr_current'" onMouseOut="javascript:this.className='infolist_hr_common'"><th nowrap >7、8<br>15:30<br>┆<br>17:20</th><td id="1-3972" class="center">&lt;&lt;STRUTS开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>讲课学时<br>&lt;&lt;Oracle数据库编程&gt;&gt;;1<br>博知楼306<br>徐美娇<br>1-8<br>5-8<br>讲课学时<br>&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时</td><td id="2-3972" class="center">&lt;&lt;Hibernate开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>名称</td><td id="3-3972" class="center">&lt;&lt;STRUTS开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>讲课学时<br>&lt;&lt;Oracle数据库编程&gt;&gt;;1<br>博知楼306<br>徐美娇<br>1-8<br>5-8<br>讲课学时<br>&lt;&lt;J2EE课程实训&gt;&gt;;2<br>博知楼506-专业实验中心<br>冯娟娟<br>17-18<br>1-8<br>实验学时</td><td id="4-3972" class="center">&lt;&lt;JSP开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>1-8<br>5-8<br>讲课学时<br>&lt;&lt;Hibernate开发技术&gt;&gt;;1<br>博知楼306<br>冯娟娟<br>9-16<br>5-8<br>名称</td><td id="5-3972" class="center">&nbsp;</td><td id="6-3972" class="center">&nbsp;</td><td id="7-3972" class="center">&nbsp;</td></tr>
+<tr class="infolist_hr_common" onMouseOver="javascript:this.className='infolist_hr_current'" onMouseOut="javascript:this.className='infolist_hr_common'"><th nowrap >9、10<br>18:30<br>┆<br>20:20</th><td id="1-3973" class="center">&nbsp;</td><td id="2-3973" class="center">&nbsp;</td><td id="3-3973" class="center">&nbsp;</td><td id="4-3973" class="center">&nbsp;</td><td id="5-3973" class="center">&nbsp;</td><td id="6-3973" class="center">&nbsp;</td><td id="7-3973" class="center">&nbsp;</td></tr>
+</table>
+
+            
+<!--调课信息-->
+
+ <br>
+ <table cellpadding="0"   cellspacing="0"   class="infolist_hr"    class="infolist_tab"   >
+<tr align="center"> 
+ <th rowspan="2">类型</th>
+  <th rowspan="2">课程号</th>
+  <th rowspan="2">课程名</th>
+  <th rowspan="2">课序号</th>
+  <th rowspan="2">教师姓名</th>
+  <th rowspan="2">代课人</th>
+  <th colspan="4">停/代课时间地点</th>
+  <th colspan="4">补课时间地点</th>
+</tr> 
+ <tr align="center">
+  <th >周</th>
+  <th >星期</th>
+  <th >节次</th>
+  <th >教室</th>
+  <th >周</th>
+  <th >星期</th>
+  <th >节次</th>
+  <th >教室</th>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td   rowspan="9">
+调课
+</td> 
+<td align="center" rowspan="9">07000301    </td>
+<td align="center" rowspan="9">计算机网络原理    </td> 
+<td align="center" rowspan="9">2</td> 
+ <td align="center" rowspan="9">李琳 </td> 
+ <td align="center" rowspan="9">&nbsp; </td> 
+ <td align="center">
+7
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+7
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+8
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+8
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+9
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+9
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+10
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+10
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+11
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+11
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+12
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+12
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+13
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+13
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+14
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+14
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+15
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+15
+     </td>
+ <td align="center">
+周五
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td   rowspan="9">
+调课
+</td> 
+<td align="center" rowspan="9">07000301    </td>
+<td align="center" rowspan="9">计算机网络原理    </td> 
+<td align="center" rowspan="9">2</td> 
+ <td align="center" rowspan="9">李琳 </td> 
+ <td align="center" rowspan="9">&nbsp; </td> 
+ <td align="center">
+7
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+7
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+8
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+8
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+9
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+9
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+10
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+10
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+11
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+11
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+12
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+12
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+13
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+13
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+14
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+14
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+15
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+15
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+9、10
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td   rowspan="9">
+调课
+</td> 
+<td align="center" rowspan="9">07000301    </td>
+<td align="center" rowspan="9">计算机网络原理    </td> 
+<td align="center" rowspan="9">2</td> 
+ <td align="center" rowspan="9">李琳 </td> 
+ <td align="center" rowspan="9">&nbsp; </td> 
+ <td align="center">
+7
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+7
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+8
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+8
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+9
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+9
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+10
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+10
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+11
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+11
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+12
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+12
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+13
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+13
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+14
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+14
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+   <tr class="infolist_hr_common">
+ <td align="center">
+15
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼506-专业实验中心
+     </td>
+ <td align="center">
+15
+     </td>
+ <td align="center">
+周四
+     </td>
+ <td align="center">
+3、4
+     </td>
+ <td align="center">
+博知楼517-专业实验中心
+     </td>
+</tr> 
+</table> 
+
+
+<table cellpadding="0" cellspacing="0" class="button_tab">
+    <tr>
+        <td>
+
+            <input type="button" value="关闭" class="button" onClick="window.close()">
+        </td>
+    </tr>
+</table>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+<table cellpadding="0" cellspacing="0" class="foot_tab">
+  <tr>
+    <td class="foot_left"></td>
+    <td class="foot_right"></td>
+  </tr>
+</table>
+</center>
+</body>
+</html>
