@@ -14,5 +14,6 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
-    url(r'', 'jw.views.index', name='index'),
+    url('^$', 'jw.views.index', name='index'),
+    url('^captcha$', 'jw.views.captcha', name='captcha'),
 )

@@ -7,7 +7,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-f = open("htmlBASE",'r')
+f = open("html", 'r')
 try:
     html = f.read()
 finally:
@@ -16,8 +16,21 @@ finally:
 soup = BeautifulSoup(html.encode('utf8'), 'lxml', from_encoding='utf8')
 
 
+tag = soup.find(class_='infolist_tab')
+
+print type(tag)
+
+test = tag.find_all(class_='infolist_common')
+
+type(test)
+for var in test:
+    for v  in var.find_all('td'):
+        print v.text
+        print '...........................................'
+    print '--------------------------------------------'
+'''
 tag = soup.find(id='timetable')
-tag = tag.find_all('tr', class_ = 'infolist_hr_common')
+tag = tag.find_all('tr', class_ ='infolist_hr_common')
 
 test = tag[0].find(id='1-1')
 
@@ -40,6 +53,7 @@ print n[:-3]
 
 
 #split('<br/>')
+'''
 '''
 for var in tag:
     for vvv in var.find_all(id=True):

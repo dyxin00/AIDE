@@ -35,7 +35,7 @@ class DataCapture(object):
         image_file.write(captcha_image.content)
         image_file.close()
 
-        return StringIO(captcha_image.content)
+        return StringIO(captcha_image.content).getvalue()
 
     def login(self, username, passcode, captcha):
 
@@ -49,7 +49,7 @@ class DataCapture(object):
                    'j_captcha' : self.__captcha}
 
         result = self.__req_session.post(login_url, params=payload)
-        if result.status_code != requests.codes.ok:
+        if result.status_codes != requests.codes.ok:
             result.raise_for_status()
 
     def get_html(self, year=2014, term_id=1):
