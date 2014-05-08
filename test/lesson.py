@@ -52,7 +52,7 @@ class DataCapture(object):
         if result.status_code != requests.codes.ok:
             result.raise_for_status()
 
-    def get_html(self, year=2014, term_id=1):
+    def get_lesson_html(self, year=2014, term_id=1):
 
         '''Get html Data'''
 
@@ -79,8 +79,11 @@ if __name__ == '__main__':
 
     cap = input('captcha :' )
 
-    data.login('201140705003', 'xin1003', cap)
+    data.login('201240703057', 'ZCBM13579XVN', cap)
 
-    html = data.get_html(2013, 2)
-    print html.text
-    print 'test'
+    import bs
+    
+    html = data.get_lesson_html(2013, 2)
+
+    bs.aaaa(html.text)
+    #print 'test'
