@@ -15,7 +15,6 @@ class DataCapture(object):
     '''JW'''
     __home_url = r'http://jw.qdu.edu.cn/homepage/index.do'
     __captcha_url = r'http://jw.qdu.edu.cn/academic/getCaptcha.do?'
-
     def __init__(self):
         self.__username = None
         self.__captcha = None
@@ -35,7 +34,7 @@ class DataCapture(object):
         image_file.write(captcha_image.content)
         image_file.close()
 
-        return StringIO(captcha_image.content).getvalue()
+        return StringIO(captcha_image.content)
 
     def login(self, username, passcode, captcha):
 
@@ -49,10 +48,11 @@ class DataCapture(object):
                    'j_captcha' : self.__captcha}
 
         result = self.__req_session.post(login_url, params=payload)
-        if result.status_codes != requests.codes.ok:
+        if result.status_code != requests.codes.ok:
             result.raise_for_status()
+        return result.text
 
-    def get_html(self, year=2014, term_id=1):
+    def get_lesson_html(self, year=2014, term_id=1):
 
         '''Get html Data'''
 
@@ -79,8 +79,12 @@ if __name__ == '__main__':
 
     cap = input('captcha :' )
 
-    data.login('201140705003', 'xin1003', cap)
+    e = data.login('201240703057', 'ZCBM13579XVN', cap)
 
-    html = data.get_html(2013, 2)
-    print html.text
-    print 'test'
+    import resolve
+    print resolve.is_login(e)
+    
+    #html = data.get_lesson_html(2013, 2)
+
+    #bs.aaaa(html.text)
+    #print 'test'

@@ -16,4 +16,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url('^$', 'jw.views.index', name='index'),
     url('^captcha$', 'jw.views.captcha', name='captcha'),
+    url('^login_jw$', 'jw.views.login_jw', name='login_jw'),
 )
