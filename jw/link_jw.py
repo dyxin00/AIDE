@@ -69,8 +69,7 @@ class DataCapture(object):
 
         __request_html = self.__req_session.get(url, params=params)
 
-        return __request_html
-
+        return __request_html.text
 
 if __name__ == '__main__':
 

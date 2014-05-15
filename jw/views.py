@@ -2,7 +2,7 @@
 from django.http import HttpResponse
 from django.utils import simplejson
 from link_jw import DataCapture
-from resolve import is_login
+from resolve import is_login, Lesson
 #from django.shortcuts import redirect, render
 
 def index(request):
@@ -19,6 +19,11 @@ def index(request):
 def captcha(request):
     ''' Get captcha '''
 
+    ''''''
+    a = request.session.get('a', 0)
+    request.session['a'] = a + 1
+    print a + 1
+
     data_capture = request.session.get('data_capture', DataCapture())
     request.session['data_capture'] = data_capture
     image = data_capture.get_captcha()
@@ -29,10 +34,10 @@ def captcha(request):
 
 def login_jw(request):
 
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        captcha = request.POST.get('captcha')
+    if request.method == 'GET':
+        username = request.GET.get('username')
+        password = request.GET.get('password')
+        captcha = request.GET.get('captcha')
         data_capture = request.session.get('data_capture')
 
         if data_capture == None:
@@ -41,6 +46,20 @@ def login_jw(request):
             return HttpResponse(simplejson.dumps(response))
         result = data_capture.login(username, password, captcha)
         status = is_login(result);
+
+        request.session['status'] = status
         return HttpResponse(simplejson.dumps({'status' : status}))
     return HttpResponse('hehe')
+
+
+def get_lesson(request):
+
+    if request.session.get('status') == 200:
+        data_capture = request.session.get('data_capture')
+
+        lesson = Lesson(data_capture.get_lesson_html())
+        response = lesson.get_lesson()
+        return HttpResponse(simplejson.dumps(response))
+
+    return HttpResponse(simplejson.dumps({'status' : 600}))
 
