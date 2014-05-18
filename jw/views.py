@@ -49,7 +49,7 @@ def login_jw(request):
 
         request.session['status'] = status
         return HttpResponse(simplejson.dumps({'status' : status}))
-    return HttpResponse('hehe')
+    return HttpResponse(simplejson.dumps({"status" : 'hehe'}))
 
 
 def get_lesson(request):

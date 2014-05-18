@@ -26,6 +26,7 @@ class Lesson():
 
         return ''.join(s.split())
 
+
     def __screening_digital(self, s):
 
         data = self.__eliminate_gaps(s)
@@ -39,17 +40,20 @@ class Lesson():
     def get_lesson(self):
 
 
-        lesson = []
+        lessons = []
         tag_list = self.soup.find(class_='infolist_tab')
         tag_lesson = tag_list.find_all(class_='infolist_common')
         for i in xrange(0, len(tag_lesson)):
-            lesson += self.__get_lesson(tag_lesson[i])
-
-        return lesson
+            lessons += self.__get_lesson(tag_lesson[i])
+        lessons = sorted(lessons, key=lambda lesson:
+                (lesson['week'], lesson['week_start'], lesson['day_start']))
+        return lessons
 
     def __get_lesson(self, lesson_html):
         '''lesson'''
         lesson_list = []
+        week_dict = {'周一' : 1, '周二' : 2, '周三' : 3, '周四' : 4,\
+                '周五': 5, '周六' : 6, '周日' : 7}
 
         result = lesson_html.find_all(class_='infolist')
         name = self.__eliminate_gaps(result[0].string)
@@ -58,7 +62,8 @@ class Lesson():
         for i in xrange(0, len(data), 4):
             lesson_dict = {}
             lesson_dict['lesson_name'] = name
-            lesson_dict['week'] = self.__eliminate_gaps(data[i+1].string)
+            lesson_dict['week'] = week_dict[self.__eliminate_gaps(
+                data[i+1].string).encode('utf-8')]
             lesson_dict['lesson_room'] = self.__eliminate_gaps(data[i+3].string)
 
             day = self.__screening_digital(data[i+2].string)
