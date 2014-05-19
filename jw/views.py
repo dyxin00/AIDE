@@ -1,4 +1,3 @@
-
 from django.http import HttpResponse
 from django.utils import simplejson
 from django.contrib.auth.models import User
@@ -60,8 +59,20 @@ def login_jw(request):
     return HttpResponse(simplejson.dumps({"status" : 'hehe'}))
 
 def login_client(request):
-    pass
 
+    if request.method == 'POST':
+        username = request.POST.get('usernanme')
+        c_passcode = request.POST.get('c_passcode')
+        
+        account = authenticate(username=username, password=c_passcode)
+
+        if isinstance(account, User):
+            login(request, account)
+            return HttpResponse(simplejson.dumps({'status' : 200}))
+
+        return HttpResponse(simplejson.dumps({'status' : 600}))
+
+    return HttpResponse(simplejson.dumps({"status" : 'hehe'}))
 
 def get_lesson(request):
     '''Get lessons'''
@@ -76,8 +87,7 @@ def get_lesson(request):
 
 def registration(request):
 
-    if request.method == 'GET':
-
+    if request.method == 'POST':
         sex = request.POST.get('sex')
         s_id = request.POST.get('s_id')
         s_passcode = request.POST.get('s_passcode')
