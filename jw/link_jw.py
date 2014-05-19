@@ -3,13 +3,13 @@
 # coding=utf-8
 
 from StringIO import StringIO
+
+from bs4 import BeautifulSoup
+import requests
+
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')   
-
-
-import requests
-from bs4 import BeautifulSoup
 
 class DataCapture(object):
     '''JW'''
@@ -26,14 +26,13 @@ class DataCapture(object):
 
         '''retrun captcha'''
         self.__req_session.get(DataCapture.__home_url)
-
         captcha_image = self.__req_session.get(DataCapture.__captcha_url)
 
-
+        '''
         image_file = open("image", "wb")
         image_file.write(captcha_image.content)
         image_file.close()
-
+        '''
         return StringIO(captcha_image.content)
 
     def login(self, username, passcode, captcha):
@@ -66,24 +65,15 @@ class DataCapture(object):
                   'sectionType' : 'BASE'}
         '''
         params = {'year' : year_id, 'term' : term_id}
-
         __request_html = self.__req_session.get(url, params=params)
-
         return __request_html.text
 
 if __name__ == '__main__':
 
     data = DataCapture()
     data.get_captcha()
-
     cap = input('captcha :' )
-
     e = data.login('201240703057', 'ZCBM13579XVN', cap)
-
     import resolve
     print resolve.is_login(e)
     
-    #html = data.get_lesson_html(2013, 2)
-
-    #bs.aaaa(html.text)
-    #print 'test'

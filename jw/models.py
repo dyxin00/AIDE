@@ -7,7 +7,7 @@ class Account(models.Model):
     user = models.OneToOneField(User)
     student_id = models.IntegerField()
     student_passcode = models.CharField(max_length=30)
-
+    sex = models.IntegerField()
 
 
 class Curriculum(models.Model):
@@ -15,6 +15,7 @@ class Curriculum(models.Model):
     user = models.ForeignKey(Account)
     yesr = models.IntegerField()
     term = models.IntegerField()
+
 
 class Lesson(models.Model):
 
