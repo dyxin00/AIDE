@@ -1,8 +1,10 @@
 
 from django.http import HttpResponse
 from django.utils import simplejson
-from link_jw import DataCapture
-from resolve import is_login, Lesson
+
+from jw.link_jw import DataCapture
+from jw.resolve import is_login, Lesson
+from jw.models import Curriculum
 #from django.shortcuts import redirect, render
 
 def index(request):
@@ -41,11 +43,11 @@ def login_jw(request):
         data_capture = request.session.get('data_capture')
 
         if data_capture == None:
-            '''701 is data captcha session do not exist'''
+            #701 is data capture session do not exist
             response = {'status' : '701'}
             return HttpResponse(simplejson.dumps(response))
         result = data_capture.login(username, password, captcha)
-        status = is_login(result);
+        status = is_login(result)
 
         request.session['status'] = status
         return HttpResponse(simplejson.dumps({'status' : status}))
@@ -53,13 +55,22 @@ def login_jw(request):
 
 
 def get_lesson(request):
+    '''Get lessons'''
+
 
     if request.session.get('status') == 200:
         data_capture = request.session.get('data_capture')
-
         lesson = Lesson(data_capture.get_lesson_html())
         response = lesson.get_lesson()
         return HttpResponse(simplejson.dumps(response))
 
     return HttpResponse(simplejson.dumps({'status' : 600}))
+
+def registration(request):
+    pass
+
+
+
+
+
 

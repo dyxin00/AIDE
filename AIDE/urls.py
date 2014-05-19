@@ -18,4 +18,5 @@ urlpatterns = patterns('',
     url('^captcha$', 'jw.views.captcha', name='captcha'),
     url('^login_jw$', 'jw.views.login_jw', name='login_jw'),
     url('^get_lesson$', 'jw.views.get_lesson', name='get_lesson'),
+    url('^registration$', 'jw.views.registration', name='registration'),
 )
