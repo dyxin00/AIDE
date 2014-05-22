@@ -2,10 +2,8 @@
 
 from bs4 import BeautifulSoup
 import re
-
 import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+#reload(sys) sys.setdefaultencoding('utf8')
 
 '''
 f = open("html", 'r')
@@ -14,7 +12,7 @@ try:
 finally:
     f.close();
 '''
-class Lesson():
+class Lesson_student(object):
 
     def __init__(self, html):
 
@@ -89,7 +87,8 @@ class Lesson():
             lesson_list.append(lesson_dict)
         return lesson_list
 
-def is_login(login_html, *args, **kw):
+def is_login(login_html, *args, **kwargs):
+    '''Verify successful landing'''
     soup = BeautifulSoup(login_html.encode('utf8'),
                     'lxml', from_encoding='utf8')
 
@@ -104,16 +103,25 @@ def is_login(login_html, *args, **kw):
     if '验证码' in error:
         return 603
 
+def get_student_info(info_html):
 
-def aaaa(html):
+    '''get info'''
 
-    lesson = Lesson(html)
-    dd = lesson.get_lesson()
+    info_dict = {}
+    soup = BeautifulSoup(info_html.encode('utf8'),
+                    'lxml', from_encoding='utf8')
+    infos = soup.find(class_='form')
+    info_tds = infos.find_all('td')
 
+    info_dict['student_id'] = info_tds[0].string
+    info_dict['full_name'] = info_tds[1].string
+    info_dict['college'] = info_tds[3].string
+    info_dict['specialty'] = info_tds[4].string
+    info_dict['course'] = info_tds[6].string
+    info_dict['school_year'] = info_tds[7].string
+    info_dict['team'] = info_tds[8].string
 
-    for d in dd:
-         for k, v in d.items():
-             print k + ' ' + v
-         print 
+    return info_dict
+
 if __name__ == '__main__':
-    pass
+    get_info(11)

@@ -67,6 +67,12 @@ class DataCapture(object):
         params = {'year' : year_id, 'term' : term_id}
         __request_html = self.__req_session.get(url, params=params)
         return __request_html.text
+    def get_info_html(self):
+
+        url = 'http://jw.qdu.edu.cn/academic/showPersonalInfo.do'
+        info_html = self.__req_session.get(url)
+
+        return info_html.text
 
 if __name__ == '__main__':
 
