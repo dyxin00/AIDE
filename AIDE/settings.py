@@ -160,3 +160,5 @@ LOGGING = {
         },
     }
 }
+
+DATABASE_ENGINE = 'sqlite3'

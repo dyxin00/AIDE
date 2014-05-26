@@ -24,10 +24,7 @@ def index(request):
 def captcha(request):
     ''' Get captcha '''
 
-    a = request.session.get('a', 0)
-    request.session['a'] = a + 1
-    print a + 1
-
+    logout(request)
     data_capture = request.session.get('data_capture', DataCapture())
     request.session['data_capture'] = data_capture
     image = data_capture.get_captcha()
@@ -71,9 +68,14 @@ def login_client(request):
         return HttpResponse(simplejson.dumps({"status" : '404'}))
     return HttpResponse(simplejson.dumps({"status" : 'hehe'}))
 
+def logout_client(request):
+
+    logout(request)
+    return HttpResponse(simplejson.dumps({"status" : '200'}))
+
 def not_logged_in(request):
 
-    return HttpResponse(simplejson.dumps({"status" : '600'}))
+    return HttpResponse(simplejson.dumps({"status" : '2600'}))
 
 @login_required(login_url='not_logged_in')
 def student_info(request):
@@ -112,7 +114,7 @@ def get_lesson(request):
                 lesson_sq.save()
             return HttpResponse(simplejson.dumps(response))
 
-        return HttpResponse(simplejson.dumps({'status' : 600}))
+        return HttpResponse(simplejson.dumps({'status' : 1600}))
     return HttpResponse(simplejson.dumps({"status" : 'hehe'}))
 
 def registration(request):
@@ -136,22 +138,9 @@ def registration(request):
                     'lennon@thebeatles.com', c_passcode)
             account = Account.objects.create(user=user,
                          student_passcode=s_passcode, **info_dict)
-            return redirect('login_client')
+            user = authenticate(username=s_id, password=c_passcode)
+            login(request, user)
+            return HttpResponse(simplejson.dumps({'status' : status}))
         return HttpResponse(simplejson.dumps({'status' : status}))
     return HttpResponse(simplejson.dumps({"status" : 'hehe'}))
 
-'''
-        sex = 1
-        s_id = 201140705003
-        s_passcode = 'xin1003'
-        c_passcode = 123
-        s_id = '201140705003'
-        s_passcode = 'xin1003'
-        c_id = '201140705001'
-        c_passcode = 'xin'
-        c_id = '201240703057'
-        c_passcode = 'xin'
-        s_id = '201240703057'
-        s_passcode = 'ZCBM13579XVN'
-        c_passcode = 'xin'
-'''

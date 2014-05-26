@@ -41,7 +41,8 @@ class Curriculum(models.Model):
 '''
 class LeesonManager(models.Manager):
     def create_lesson(self, **kwargs):
-        lesson = self. 
+
+
 '''
 class Lesson(models.Model):
 

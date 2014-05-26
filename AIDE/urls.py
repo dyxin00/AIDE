@@ -22,4 +22,5 @@ urlpatterns = patterns('',
     url('^registration$', 'jw.views.registration', name='registration'),
     url('^not_logged_in$', 'jw.views.not_logged_in', name='not_logged_in'),
     url('^student_info$', 'jw.views.student_info', name='student_info'),
+    url('^logout_client$', 'jw.views.logout_client', name='logout_client'),
 )
